@@ -42,8 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Circle.cs" />
+    <Compile Include="ComplexNumber.cs" />
+    <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RectangleWithAutoProps.cs" />
+    <Compile Include="Rectangle.cs" />
+    <Compile Include="Task4Circle.cs" />
+    <Compile Include="Task4Rectangle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
