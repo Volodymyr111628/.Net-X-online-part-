@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E9203DBE-5C99-4F0C-B213-180E696C46ED}</ProjectGuid>
+    <ProjectGuid>{852D864C-E37F-4B36-AE14-CA3908B42814}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Net_X_Homeworks</RootNamespace>
-    <AssemblyName>Net_X_Homeworks</AssemblyName>
+    <RootNamespace>Trening1</RootNamespace>
+    <AssemblyName>Trening1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
