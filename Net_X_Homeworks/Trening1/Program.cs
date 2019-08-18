@@ -10,7 +10,7 @@ namespace Trening1
     {
         static void Main(string[] args)
         {
-            double x1, x2, y1, y2, radius;
+            double x1, x2, y1, y2, radius, a, b;
 
             Console.Write("Input X coordinate of top left point: ");
             x1 = Double.Parse(Console.ReadLine());
@@ -39,8 +39,8 @@ namespace Trening1
 
             var myRect = new RectangleWithAutoProps { TopLeftPoint = new Point(x1, y1), BottomRightPoint = new Point(x2, y2) };
 
-            Console.WriteLine("Yours rectangle perimeter: " + myRectangle.getPerimeter().ToString());
-            Console.WriteLine("Yours rectangle square: " + myRectangle.getSquare().ToString());
+            Console.WriteLine("Yours rectangle perimeter: " + myRect.getPerimeter().ToString());
+            Console.WriteLine("Yours rectangle square: " + myRect.getSquare().ToString());
 
             Console.WriteLine("----------------------TASK 3-------------------");
 
@@ -49,8 +49,8 @@ namespace Trening1
 
             Circle myCircle= new Circle(radius);
 
-            Console.Write("Circle's length: " + myCircle.getLength(radius));
-            Console.Write("Circle's square: " + myCircle.getSquare(radius));
+            Console.WriteLine("Circle's length: {0:F3}" , myCircle.getLength(radius));
+            Console.WriteLine("Circle's square: {0:F3}" , myCircle.getSquare(radius));
 
             Console.WriteLine("----------------------TASK 4-------------------");
 
@@ -73,6 +73,15 @@ namespace Trening1
             Console.WriteLine("Yours circle square: " + Task4Circle.getSquare(radius).ToString());
 
             Console.WriteLine("----------------------TASK 5-------------------");
+            
+            Console.Write("Input real part of complex number: ");
+            a = Double.Parse(Console.ReadLine());
+
+            Console.Write("Input virtual part of complex number: ");
+            b = Double.Parse(Console.ReadLine());
+
+            ComplexNumber complexNumber = new ComplexNumber(a,b);
+            complexNumber.Print();
 
             Console.ReadLine();
         }
