@@ -10,12 +10,24 @@ namespace Trening1
     {
         public static double getPerimeter(Point topLeftPoint,Point bottomRightPoint)
         {
-            return (Math.Abs(topLeftPoint.getX() - bottomRightPoint.getX()) + Math.Abs(topLeftPoint.getY() - bottomRightPoint.getY())) * 2;
+            double height = topLeftPoint.getY() - bottomRightPoint.getY();
+            double width = topLeftPoint.getX() - bottomRightPoint.getX();
+            if (height < 0)
+                height *= -1;
+            if (width < 0)
+                width *= -1;
+            return (height + width) * 2;
         }
 
         public static double getSquare(Point topLeftPoint, Point bottomRightPoint)
         {
-            return Math.Abs(topLeftPoint.getX() - bottomRightPoint.getX()) * Math.Abs(topLeftPoint.getY() - bottomRightPoint.getY());
+            double height = topLeftPoint.getY() - bottomRightPoint.getY();
+            double width = topLeftPoint.getX() - bottomRightPoint.getX();
+            if (height < 0)
+                height *= -1;
+            if (width < 0)
+                width *= -1;
+            return height * width;
         }
     }
 }

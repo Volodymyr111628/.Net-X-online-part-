@@ -42,9 +42,11 @@ namespace Trening1
         public void Print()
         {
             if (b == 0)
-                Console.WriteLine("Your nuumber is real: " + a.ToString());
+                Console.WriteLine( a.ToString());
+            else if (b < 0)
+                Console.WriteLine( a.ToString() + b.ToString() + "*i"); 
             else
-                Console.WriteLine("Your complex number is: " + a.ToString() + " + " + b.ToString() + "*i");
+                Console.WriteLine(a.ToString() + "+" + b.ToString() + "*i");
         }
 
         public double getA()

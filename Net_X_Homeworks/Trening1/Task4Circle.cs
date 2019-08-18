@@ -8,14 +8,15 @@ namespace Trening1
 {
     public static class Task4Circle
     {
+        public static double PI = 3.1415926535;
         public static double getLength(double radius)
         {
-            return radius * 2 * Math.PI;
+            return radius * 2 * PI;
         }
 
         public static double getSquare(double radius)
         {
-            return Math.PI * radius * radius;
+            return PI * radius * radius;
         }
     }
 }

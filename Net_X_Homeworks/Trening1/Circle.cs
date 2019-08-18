@@ -8,7 +8,7 @@ namespace Trening1
 {
     public class Circle
     {
-        public const double PI = Math.PI;
+        public const double PI = 3.1415926535;
         public double radius;
 
         public Circle()

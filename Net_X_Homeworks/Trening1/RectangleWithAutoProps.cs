@@ -8,17 +8,32 @@ namespace Trening1
 {
     public class RectangleWithAutoProps
     {
-        public Point TopLeftPoint{ get; set; }
-        public Point BottomRightPoint { get; set; }
+        public Point topLeftPoint;
+        public Point bottomRightPoint;
 
-        public double getPerimeter()
+        public double RectangleSquare { get; set; }
+        public double RectanglePerimeter { get; set; }
+        
+        public RectangleWithAutoProps()
         {
-            return (Math.Abs(TopLeftPoint.getX() - BottomRightPoint.getX()) + Math.Abs(TopLeftPoint.getY() - BottomRightPoint.getY())) * 2;
+            topLeftPoint = new Point();
+            bottomRightPoint = new Point();
+            RectangleSquare = 0;
+            RectanglePerimeter = 0;
         }
 
-        public double getSquare()
+        public RectangleWithAutoProps(double x1, double y1, double x2, double y2)
         {
-            return Math.Abs(TopLeftPoint.getX() - BottomRightPoint.getX()) * Math.Abs(TopLeftPoint.getY() - BottomRightPoint.getY());
+            topLeftPoint = new Point(x1, y1);
+            bottomRightPoint = new Point(x2, y2);
+            double height = topLeftPoint.getY() - bottomRightPoint.getY();
+            double width = topLeftPoint.getX() - bottomRightPoint.getX();
+            if (height < 0)
+                height *= -1;
+            if (width < 0)
+                width *= -1;
+            RectangleSquare = height * width;
+            RectanglePerimeter = (height + width) * 2;
         }
     }
 }

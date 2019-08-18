@@ -25,12 +25,24 @@ namespace Trening1
 
         public double getPerimeter()
         {
-            return (Math.Abs(topLeftPoint.getX() - bottomRightPoint.getX()) + Math.Abs(topLeftPoint.getY() - bottomRightPoint.getY())) * 2;
+            double height = topLeftPoint.getY() - bottomRightPoint.getY();
+            double width = topLeftPoint.getX() - bottomRightPoint.getX();
+            if (height < 0)
+                height *= -1;
+            if (width < 0)
+                width *= -1;
+            return (height + width) * 2;
         }
 
         public double getSquare()
         {
-            return Math.Abs(topLeftPoint.getX() - bottomRightPoint.getX()) * Math.Abs(topLeftPoint.getY() - bottomRightPoint.getY());
+            double height = topLeftPoint.getY() - bottomRightPoint.getY();
+            double width = topLeftPoint.getX() - bottomRightPoint.getX();
+            if (height < 0)
+                height *= -1;
+            if (width < 0)
+                width *= -1;
+            return height * width;
         }
     }
 }
