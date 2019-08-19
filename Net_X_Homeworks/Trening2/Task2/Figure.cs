@@ -18,10 +18,10 @@ namespace Trening2.Task2
             Y = 0;
         }
 
-        public Figure(double _x,double _y)
+        public Figure(double x,double y)
         {
-            X = _x;
-            Y = _y;
+            X = x;
+            Y = y;
         }
 
         public abstract void Draw();

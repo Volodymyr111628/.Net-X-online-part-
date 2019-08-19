@@ -8,7 +8,7 @@ namespace Trening1
 {
     class Task4Rectangle
     {
-        public static double getPerimeter(Point topLeftPoint,Point bottomRightPoint)
+        public static double getPerimeter(Point topLeftPoint, Point bottomRightPoint)
         {
             double height = topLeftPoint.getY() - bottomRightPoint.getY();
             double width = topLeftPoint.getX() - bottomRightPoint.getX();

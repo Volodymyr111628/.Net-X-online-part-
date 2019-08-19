@@ -42,9 +42,9 @@ namespace Trening1
         public void Print()
         {
             if (b == 0)
-                Console.WriteLine( a.ToString());
+                Console.WriteLine(a.ToString());
             else if (b < 0)
-                Console.WriteLine( a.ToString() + b.ToString() + "*i"); 
+                Console.WriteLine(a.ToString() + b.ToString() + "*i");
             else
                 Console.WriteLine(a.ToString() + "+" + b.ToString() + "*i");
         }

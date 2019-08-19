@@ -68,6 +68,8 @@ namespace Trening2
             DrawAll(myRectangleTask4, mySquareTask4, myFigureTask4);
 
             #endregion
+
+            Console.ReadLine();
         }
         static void DrawAll(params Task4.IDrawable[] array)
         {

@@ -16,19 +16,19 @@ namespace Trening1
             radius = 0;
         }
 
-        public Circle(double _radius)
+        public Circle(double radius)
         {
-            this.radius = _radius;
+            this.radius = radius;
         }
 
-        public double getLength(double rad)
+        public double getLength(double radius)
         {
-            return rad * 2 * PI;
+            return radius * 2 * PI;
         }
 
-        public double getSquare(double rad)
+        public double getSquare(double radius)
         {
-            return PI * rad * rad;
+            return PI * radius * radius;
         }
     }
 }

@@ -36,7 +36,7 @@ namespace Trening1
             while (!Double.TryParse(valid, out y2))
                 doubleValidator(ref valid);
 
-            Rectangle myRectangle = new Rectangle(x1,y1,x2,y2);
+            Rectangle myRectangle = new Rectangle(x1, y1, x2, y2);
 
             Console.WriteLine("Yours rectangle perimeter: " + myRectangle.getPerimeter().ToString());
             Console.WriteLine("Yours rectangle square: " + myRectangle.getSquare().ToString());
@@ -83,10 +83,10 @@ namespace Trening1
             while (!Double.TryParse(valid, out radius))
                 doubleValidator(ref valid);
 
-            Circle myCircle= new Circle(radius);
+            Circle myCircle = new Circle(radius);
 
-            Console.WriteLine("Circle's length: {0:F3}" , myCircle.getLength(radius));
-            Console.WriteLine("Circle's square: {0:F3}" , myCircle.getSquare(radius));
+            Console.WriteLine("Circle's length: {0:F3}", myCircle.getLength(radius));
+            Console.WriteLine("Circle's square: {0:F3}", myCircle.getSquare(radius));
 
             #endregion
 
@@ -114,7 +114,7 @@ namespace Trening1
             while (!Double.TryParse(valid, out y2))
                 doubleValidator(ref valid);
 
-            Console.WriteLine("Yours rectangle perimeter: " + Task4Rectangle.getPerimeter(new Point(x1,y1),new Point(x2,y2)).ToString());
+            Console.WriteLine("Yours rectangle perimeter: " + Task4Rectangle.getPerimeter(new Point(x1, y1), new Point(x2, y2)).ToString());
             Console.WriteLine("Yours rectangle square: " + Task4Rectangle.getSquare(new Point(x1, y1), new Point(x2, y2)).ToString());
 
             Console.Write("Input the circle's radius: ");
@@ -122,8 +122,8 @@ namespace Trening1
             while (!Double.TryParse(valid, out radius))
                 doubleValidator(ref valid);
 
-            Console.WriteLine("Yours circle length: {0:F3}" , Task4Circle.getLength(radius));
-            Console.WriteLine("Yours circle square: {0:F3}" , Task4Circle.getSquare(radius));
+            Console.WriteLine("Yours circle length: {0:F3}", Task4Circle.getLength(radius));
+            Console.WriteLine("Yours circle square: {0:F3}", Task4Circle.getSquare(radius));
 
             #endregion
 
@@ -141,7 +141,7 @@ namespace Trening1
             while (!Double.TryParse(valid, out b))
                 doubleValidator(ref valid);
 
-            ComplexNumber complexNumber = new ComplexNumber(a,b);
+            ComplexNumber complexNumber = new ComplexNumber(a, b);
 
             Console.Write("Your complex number: ");
             complexNumber.Print();
@@ -158,17 +158,17 @@ namespace Trening1
 
             Console.Write("Result of division: ");
             resultOfDivision.Print();
-            
+
             ComplexNumber complexNumberToMult = new ComplexNumber(3, -2);
             ComplexNumber multiplier = new ComplexNumber(2, 5);
 
-            ComplexNumber resultOfMultiplication = complexNumberToMult*multiplier;
+            ComplexNumber resultOfMultiplication = complexNumberToMult * multiplier;
 
             Console.Write("Complex number: ");
             complexNumberToMult.Print();
             Console.Write("Multiplier: ");
             multiplier.Print();
-            
+
             Console.Write("Result of multiplication: ");
             resultOfMultiplication.Print();
 
