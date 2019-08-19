@@ -11,18 +11,30 @@ namespace Trening1
         static void Main(string[] args)
         {
             double x1, x2, y1, y2, radius, a, b;
+            string valid = "";
 
             #region TASK 1
             Console.WriteLine("----------------------TASK 1-------------------");
 
             Console.Write("Input X coordinate of top left point: ");
-            x1 = Double.Parse(Console.ReadLine());
+            valid = Console.ReadLine();
+            while (!Double.TryParse(valid, out x1))
+                doubleValidator(ref valid);
+
             Console.Write("Input Y coordinate of top left point: ");
-            y1= Double.Parse(Console.ReadLine());
+            valid = Console.ReadLine();
+            while (!Double.TryParse(valid, out y1))
+                doubleValidator(ref valid);
+
             Console.Write("Input X coordinate of bottom right point: ");
-            x2 = Double.Parse(Console.ReadLine());
+            valid = Console.ReadLine();
+            while (!Double.TryParse(valid, out x2))
+                doubleValidator(ref valid);
+
             Console.Write("Input Y coordinate of bottom right point: ");
-            y2 = Double.Parse(Console.ReadLine());
+            valid = Console.ReadLine();
+            while (!Double.TryParse(valid, out y2))
+                doubleValidator(ref valid);
 
             Rectangle myRectangle = new Rectangle(x1,y1,x2,y2);
 
@@ -36,13 +48,24 @@ namespace Trening1
             Console.WriteLine("----------------------TASK 2-------------------");
 
             Console.Write("Input X coordinate of top left point: ");
-            x1 = Double.Parse(Console.ReadLine());
+            valid = Console.ReadLine();
+            while (!Double.TryParse(valid, out x1))
+                doubleValidator(ref valid);
+
             Console.Write("Input Y coordinate of top left point: ");
-            y1 = Double.Parse(Console.ReadLine());
+            valid = Console.ReadLine();
+            while (!Double.TryParse(valid, out y1))
+                doubleValidator(ref valid);
+
             Console.Write("Input X coordinate of bottom right point: ");
-            x2 = Double.Parse(Console.ReadLine());
+            valid = Console.ReadLine();
+            while (!Double.TryParse(valid, out x2))
+                doubleValidator(ref valid);
+
             Console.Write("Input Y coordinate of bottom right point: ");
-            y2 = Double.Parse(Console.ReadLine());
+            valid = Console.ReadLine();
+            while (!Double.TryParse(valid, out y2))
+                doubleValidator(ref valid);
 
             RectangleWithAutoProps myRect = new RectangleWithAutoProps(x1, y1, x2, y2);
 
@@ -56,7 +79,9 @@ namespace Trening1
             Console.WriteLine("----------------------TASK 3-------------------");
 
             Console.Write("Input circle's radius: ");
-            radius = Double.Parse(Console.ReadLine());
+            valid = Console.ReadLine();
+            while (!Double.TryParse(valid, out radius))
+                doubleValidator(ref valid);
 
             Circle myCircle= new Circle(radius);
 
@@ -70,19 +95,32 @@ namespace Trening1
             Console.WriteLine("----------------------TASK 4-------------------");
 
             Console.Write("Input X coordinate of top left point: ");
-            x1 = Double.Parse(Console.ReadLine());
+            valid = Console.ReadLine();
+            while (!Double.TryParse(valid, out x1))
+                doubleValidator(ref valid);
+
             Console.Write("Input Y coordinate of top left point: ");
-            y1 = Double.Parse(Console.ReadLine());
+            valid = Console.ReadLine();
+            while (!Double.TryParse(valid, out y1))
+                doubleValidator(ref valid);
+
             Console.Write("Input X coordinate of bottom right point: ");
-            x2 = Double.Parse(Console.ReadLine());
+            valid = Console.ReadLine();
+            while (!Double.TryParse(valid, out x2))
+                doubleValidator(ref valid);
+
             Console.Write("Input Y coordinate of bottom right point: ");
-            y2 = Double.Parse(Console.ReadLine());
+            valid = Console.ReadLine();
+            while (!Double.TryParse(valid, out y2))
+                doubleValidator(ref valid);
 
             Console.WriteLine("Yours rectangle perimeter: " + Task4Rectangle.getPerimeter(new Point(x1,y1),new Point(x2,y2)).ToString());
             Console.WriteLine("Yours rectangle square: " + Task4Rectangle.getSquare(new Point(x1, y1), new Point(x2, y2)).ToString());
 
-            Console.Write("Input circle's radius: ");
-            radius = Double.Parse(Console.ReadLine());
+            Console.Write("Input the circle's radius: ");
+            valid = Console.ReadLine();
+            while (!Double.TryParse(valid, out radius))
+                doubleValidator(ref valid);
 
             Console.WriteLine("Yours circle length: {0:F3}" , Task4Circle.getLength(radius));
             Console.WriteLine("Yours circle square: {0:F3}" , Task4Circle.getSquare(radius));
@@ -92,12 +130,16 @@ namespace Trening1
             #region TASK 5
 
             Console.WriteLine("----------------------TASK 5-------------------");
-            
-            Console.Write("Input real part of complex number: ");
-            a = Double.Parse(Console.ReadLine());
 
-            Console.Write("Input virtual part of complex number: ");
-            b = Double.Parse(Console.ReadLine());
+            Console.Write("Input the real part of complex number: ");
+            valid = Console.ReadLine();
+            while (!Double.TryParse(valid, out a))
+                doubleValidator(ref valid);
+
+            Console.Write("Input the virtual part of complex number: ");
+            valid = Console.ReadLine();
+            while (!Double.TryParse(valid, out b))
+                doubleValidator(ref valid);
 
             ComplexNumber complexNumber = new ComplexNumber(a,b);
 
@@ -133,6 +175,12 @@ namespace Trening1
             #endregion
 
             Console.ReadLine();
+        }
+
+        static void doubleValidator(ref string valid)
+        {
+            Console.Write("Value is not in appropriate format please input again:");
+            valid = Console.ReadLine();
         }
     }
 }
