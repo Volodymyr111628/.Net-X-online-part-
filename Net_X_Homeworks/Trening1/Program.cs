@@ -11,6 +11,7 @@ namespace Trening1
         static void Main(string[] args)
         {
             double x1, x2, y1, y2, radius, a, b;
+
             #region TASK 1
             Console.WriteLine("----------------------TASK 1-------------------");
 
