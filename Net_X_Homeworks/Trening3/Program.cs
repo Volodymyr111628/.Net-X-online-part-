@@ -1,12 +1,11 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Trening3
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -83,7 +82,7 @@ namespace Trening3
             }
             else
             {
-                Process.GetCurrentProcess().Kill();
+                Environment.Exit(0);
             }
 
             #endregion
@@ -145,6 +144,5 @@ namespace Trening3
                 } while ((index < words.Count) && (counter < 5));
             }
         }
-
     }
 }
